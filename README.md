@@ -1,4 +1,4 @@
-# Examine Shared Alleles? Yes! (EShAY)
+# Examine Shared Alleles (Esa)
 
 A small python package with a very tortured acronym. Contains functions to compare two genetic datasets to each other (in VCF format) to assess similarity.
 It was developed to find duplicate tissue donors between experiments across scRNA datasets. 
