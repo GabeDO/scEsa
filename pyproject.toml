@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["EShAY*"]
+include = ["scEsa*"]
 
 [project]
-name = "EShAY"
-version = "1.0.4"
+name = "scEsa"
+version = "1.0.6"
 authors = [
   { name="Dr Gabe O'Reilly", email="g.oreilly@garvan.org.au" },
 ]

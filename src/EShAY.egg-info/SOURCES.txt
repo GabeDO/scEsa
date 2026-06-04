@@ -1,9 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-src/EShAY/EShAY.py
-src/EShAY/__init__.py
-src/EShAY.egg-info/PKG-INFO
-src/EShAY.egg-info/SOURCES.txt
-src/EShAY.egg-info/dependency_links.txt
-src/EShAY.egg-info/top_level.txt

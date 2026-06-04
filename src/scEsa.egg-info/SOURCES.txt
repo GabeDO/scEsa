@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/scEsa/__init__.py
+src/scEsa/scEsa.py
+src/scEsa.egg-info/PKG-INFO
+src/scEsa.egg-info/SOURCES.txt
+src/scEsa.egg-info/dependency_links.txt
+src/scEsa.egg-info/top_level.txt

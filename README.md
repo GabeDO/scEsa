@@ -1,6 +1,6 @@
-# Examine Shared Alleles (Esa)
+# single cell, Examine Shared Alleles (scEsa)
 
-A small python package with a very tortured acronym. Contains functions to compare two genetic datasets to each other (in VCF format) to assess similarity.
+A small python package that contains functions to compare two genetic datasets to each other (in VCF format) to assess similarity.
 It was developed to find duplicate tissue donors between experiments across scRNA datasets. 
 
 ## Description
@@ -11,17 +11,17 @@ An in-depth paragraph about your project and overview of use.
 
 To install, just use:
 ```
-pip install EShAY
+pip install scEsa
 ```
 and load:
 
 ```
-from EShAY import *
+from scEsa import *
 ```
 
 The main function of the package is:
 ```
-Similarity(file1, file2, method)
+scEsa.Similarity(file1, file2, method)
 ```
 This function take in two VCF files ('file1' and 'file2').
 'method' tells the package which calculation to use for, either using a comparison based on Expected Heterozygosity (1-sum(p*2)) or Shannons Information (-sum(p*ln(p))). Default is

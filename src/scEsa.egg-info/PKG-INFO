@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
-Name: EShAY
-Version: 1.0.4
+Name: scEsa
+Version: 1.0.6
 Summary: A package to look at similarity between two genetic datasets. Useful for finding duplicate tissue donors betwen studies.
 Author-email: Dr Gabe O'Reilly <g.oreilly@garvan.org.au>
 License-Expression: MIT
@@ -12,9 +12,9 @@ Description-Content-Type: text/markdown
 License-File: LICENSE
 Dynamic: license-file
 
-# Examine Shared Alleles? Yes! (EShAY)
+# single cell, Examine Shared Alleles (scEsa)
 
-A small python package with a very tortured acronym. Contains functions to compare two genetic datasets to each other (in VCF format) to assess similarity.
+A small python package that contains functions to compare two genetic datasets to each other (in VCF format) to assess similarity.
 It was developed to find duplicate tissue donors between experiments across scRNA datasets. 
 
 ## Description
@@ -23,12 +23,22 @@ An in-depth paragraph about your project and overview of use.
 
 ## Getting Started
 
+To install, just use:
+```
+pip install scEsa
+```
+and load:
+
+```
+from scEsa import *
+```
+
 The main function of the package is:
 ```
-Similarity(file1, file2, method)
+scEsa.Similarity(file1, file2, method)
 ```
 This function take in two VCF files ('file1' and 'file2').
-'method' tells the package which calculation to use for, either using a comparison based on Expected Heterozygosity (1-sum(p*2)) or Shannons Information (-sum(p*ln(p))).
+'method' tells the package which calculation to use for, either using a comparison based on Expected Heterozygosity (1-sum(p*2)) or Shannons Information (-sum(p*ln(p))). Default is
 For Expected Heterozygosity set 'method' to either the string "ExpHet" or the integer 2.
 For Shannons Information set 'method' to either the string "Shan" or the integer 1.
 
@@ -38,7 +48,7 @@ results will be printed and returned as a list, in the format:
 ```
 Sample1/2 are just the names of the samples taken from the VCF headers. If a VCF file has more than one sample in it, only the 1st sample will be used. 
 
-Similarity is the main result. Any value over 0.8 suggests the same donor (see 'N_Loc' below), with a value of 1 indicating a completly identical dataset.
+Similarity is the main result. Any value over 0.8 using 'method'=2/"ExpHet" suggests the same donor (see 'N_Loc' below), with a value of 1 indicating a completly identical dataset.
 
 Pooled diversity is the total ammount of genotype diversity when all loci between both samples is pooled. This is used as a baseline of diveristy for the method, but can be used as a QC metric. If your samples have 0 pooled diversity it can indicate some data quality issues (even identical samples will have some pooled diversity).
 
